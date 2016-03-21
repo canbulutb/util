@@ -24,7 +24,7 @@ fi
 if [ -n "$2" ]; then
     startdate=$(date -d "$2" +%Y%m%d) || printUsage -1
 else
-    startdate=$(date -d "-1 day" +%Y%m%d)
+    startdate=$(date -d "- 1 day" +%Y%m%d)
 fi
 
 if [ -n "$3" ]; then
@@ -37,5 +37,5 @@ fi
 d="$startdate"
 while [ "$(date -d "$d" +%Y%m%d)" -le "$(date -d "$enddate" +%Y%m%d)" ]; do
     runJob $d
-    d=$(date -d "$d +1 day" +%Y%m%d)
+    d=$(date -d "$d + 1 day" +%Y%m%d)
 done
