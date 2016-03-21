@@ -1,10 +1,12 @@
 #!/bin/bash
 
+script="java_run_fordate"
+
 function printUsage {
     echo "USAGE: "
-    echo "  $0 jarfile [DATE_FROM] [DATE_UNTIL]  Execute job for a date range (inclusive)"
-    echo "  $0 jarfile [ETT_DATE]                Execute job for a specific day"
-    echo "  $0 jarfile                           Execute job for last day only"
+    echo "  $script jarfile [DATE_FROM] [DATE_UNTIL]  Execute job for a date range (inclusive)"
+    echo "  $script jarfile [ETT_DATE]                Execute job for a specific day"
+    echo "  $script jarfile                           Execute job for last day only"
     exit $1
 }
 
